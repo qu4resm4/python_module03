@@ -2,7 +2,7 @@
 import math
 
 
-def get_player_pos() -> tuple[float]:
+def get_player_pos() -> tuple[float, ...]:
     tuple_coords: tuple = tuple()
     while len(tuple_coords) == 0:
         str_coord: str = input("Enter new coordinates as floats "
@@ -25,7 +25,8 @@ def get_player_pos() -> tuple[float]:
     return tuple_coords
 
 
-def distance_formula(fisrt: tuple[float], second: tuple[float]) -> float:
+def distance_formula(fisrt: tuple[float, ...],
+                     second: tuple[float, ...]) -> float:
     x1 = fisrt[0]
     y1 = fisrt[1]
     z1 = fisrt[2]
